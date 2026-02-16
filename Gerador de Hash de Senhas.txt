@@ -1,0 +1,28 @@
+Gerador de Hash de Senhas
+Use as senhas a seguir para inserir no banco de dados.
+
+Usuário Borracharia:
+user_borracharia
+Senha Simples: borracha123
+
+Hash Gerado: $2y$10$clkPrtvB6RtVOxg3XRJHWeeKqdGcAjXNDrbgamQSo/6SJ7vcPh/Ya
+
+Usuário Autopeças:
+
+user_autopecas
+Senha Simples: pecas456
+
+Hash Gerado: $2y$10$an.0SkyapNDrM11ApLCqNeWK9dbAJqEi5GZK1FuQx8kwSVIXhRwz.
+
+Usuário Mecânica:
+
+user_mecanica
+Senha Simples: mecanica789
+
+Hash Gerado: $2y$10$ht0NVMTH46p0j5Q1Eera7umzI9ElGet15HupgFGaggMwpUVabFtV2
+
+Usuário Administrador:
+
+Senha Simples: adminmaster
+
+Hash Gerado: $2y$10$lakczAvh/y2lJ1A4jxhZeuTItBU4tJ7Yl.9dUsTiWu4leVknWK63K

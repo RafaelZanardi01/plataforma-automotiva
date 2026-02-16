@@ -1,0 +1,222 @@
+/* Estilos Globais e Reset Básico */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #212529; /* Fundo cinza muito escuro (quase preto) */
+    color: #f8f9fa; /* Texto branco/cinza claro para contraste padrão */
+    line-height: 1.6;
+}
+
+/* Container principal de conteúdo */
+.container {
+    background-color: #343a40; /* Cinza escuro para os containers de conteúdo */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Sombra mais pronunciada */
+    max-width: 1000px;
+    margin: 40px auto;
+    border-top: 5px solid #007bff; /* Detalhe azul no topo */
+}
+
+/* Títulos H1, H2, H3 */
+h1, h2, h3 {
+    color: #007bff; /* Azul para os títulos */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #e9ecef; /* Texto um pouco mais claro para parágrafos */
+}
+
+/* Estilos de Botões Genéricos (para agendamentos/status, etc.) */
+.btn {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin: 2px;
+}
+.btn:hover:not(:disabled) { opacity: 0.9; }
+.btn:disabled { background-color: #cccccc; cursor: not-allowed; color: #666; }
+
+/* Mensagens de Sucesso, Erro, Info (Alerts) */
+.message { 
+    padding: 12px 20px; border-radius: 6px; margin-bottom: 20px; font-size: 0.95em; 
+    display: flex; align-items: center; gap: 10px; 
+}
+.message.success { background-color: #28a745; color: white; border: 1px solid #218838; }
+.message.error { background-color: #dc3545; color: white; border: 1px solid #c82333; }
+.message.info { background-color: #17a2b8; color: white; border: 1px solid #138496; }
+
+/* --- Estilos Comuns de Formulários --- */
+.form-group { margin-bottom: 20px; }
+.form-group label { 
+    display: block; margin-bottom: 8px; font-weight: 600; 
+    color: #ced4da; /* Labels mais claros para tema escuro */
+    font-size: 0.95em; 
+}
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="email"],
+.form-group input[type="datetime-local"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 24px); padding: 12px;
+    border: 1px solid #495057; /* Borda mais escura */
+    border-radius: 6px; font-size: 1em; box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #6c757d; /* Fundo dos inputs mais escuro */
+    color: #f8f9fa; /* Cor do texto dos inputs (branco claro) */
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: #007bff; box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); outline: none;
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-group small {
+    display: block; margin-top: 5px; color: #adb5bd; font-size: 0.85em;
+}
+
+/* Ações do Formulário (Botões de Envio/Voltar) */
+.form-actions { display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px; }
+.form-actions input[type="submit"], .form-actions .btn-back {
+    padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer; font-size: 1em; font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease; text-decoration: none; display: inline-block; text-align: center;
+    color: white;
+}
+.form-actions input[type="submit"] { background-color: #28a745; }
+.form-actions input[type="submit"]:hover { background-color: #218838; transform: translateY(-2px); }
+.form-actions .btn-back { background-color: #6c757d; }
+.form-actions .btn-back:hover { background-color: #5a6268; transform: translateY(-2px); }
+
+
+/* --- Estilos Comuns de Tabelas --- */
+table { 
+    width: 100%; border-collapse: collapse; margin-top: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); table-layout: auto; 
+}
+th, td {
+    border: 1px solid #495057; /* Borda da tabela mais escura */
+    padding: 12px; text-align: left; vertical-align: middle; word-wrap: break-word; 
+    color: #e9ecef; /* Cor do texto dentro das células (cinza claro/branco) */
+}
+th { 
+    background-color: #6c757d; color: white; font-weight: 600; text-align: center; 
+}
+tr:nth-child(even) {
+    background-color: #5a6268; /* Fundo para linhas pares (um cinza mais escuro) */
+}
+tr:hover {
+    background-color: #6c757d; /* Fundo no hover */
+}
+.no-records { 
+    text-align: center; padding: 20px; 
+    color: #ced4da; font-style: italic; background-color: #6c757d; border-radius: 8px; 
+}
+.action-buttons.table-top {
+    text-align: left; display: flex; gap: 10px; justify-content: space-between; align-items: center;
+    margin-bottom: 20px; flex-wrap: wrap;
+}
+.action-buttons.table-top .btn-add { background-color: #28a745; }
+.action-buttons.table-top .btn-add:hover { background-color: #218838; }
+
+
+/* --- Estilos de Dashboards (módulos) --- */
+.dashboard-header { text-align: center; margin-bottom: 30px; }
+.dashboard-header h2 { font-size: 2.2em; margin-bottom: 10px; color: #007bff; }
+.dashboard-header p { font-size: 1.1em; color: #ced4da; }
+
+.module-links {
+    list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 25px;
+    justify-content: center; margin-top: 30px;
+}
+.module-links li {
+    flex: 1 1 calc(33% - 25px); max-width: 300px; min-width: 250px;
+    background-color: #495057;
+    border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid #007bff;
+}
+.module-links li:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); }
+.module-links li h3 { 
+    font-size: 1.5em; color: #f8f9fa; margin-bottom: 15px; 
+    border-bottom: 1px solid #5a6268; padding-bottom: 10px; 
+}
+.module-links li p { color: #e9ecef; font-size: 0.95em; margin-bottom: 20px; }
+.module-links li a.btn-access {
+    background-color: #28a745; color: #fff; padding: 10px 20px; border-radius: 5px;
+    text-decoration: none; font-weight: 600; transition: background-color 0.3s ease;
+    display: inline-block;
+}
+.module-links li a.btn-access:hover { background-color: #1e7e34; }
+
+.logout-button { text-align: center; margin-top: 40px; }
+.logout-button a {
+    background-color: #dc3545; color: white; padding: 10px 25px; border-radius: 5px;
+    text-decoration: none; font-weight: 600; transition: background-color 0.3s ease;
+}
+.logout-button a:hover { background-color: #c82333; }
+
+
+/* --- Estilos para Status --- */
+.status-aberta { background-color: #007bff; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-pendente { background-color: #ffc107; color: #343a40; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-confirmado { background-color: #17a2b8; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-em_andamento { background-color: #6f42c1; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-aguardando_peca { background-color: #ffc107; color: #343a40; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-concluida { background-color: #28a745; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+.status-cancelada { background-color: #dc3545; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+
+/* Estilos para botões de ação na linha da tabela (Editar/Excluir/Status) */
+.btn-edit, .btn-delete, .btn-edit-os {
+    width: 75px; padding: 6px 0; border-radius: 4px; text-decoration: none; color: white; font-size: 0.85em;
+    white-space: nowrap; display: inline-block; text-align: center; box-sizing: border-box;
+    transition: background-color 0.3s ease, transform 0.2s ease; line-height: 1.5; vertical-align: middle;
+}
+.btn-edit { background-color: #007bff; margin-right: 5px; }
+.btn-edit:hover { background-color: #0056b3; transform: translateY(-1px); }
+.btn-delete { background-color: #dc3545; }
+.btn-delete:hover { background-color: #c82333; transform: translateY(-1px); }
+
+.btn-edit-os { background-color: #007bff; margin-right: 5px; }
+.btn-edit-os:hover { background-color: #0056b3; transform: translateY(-1px); }
+
+
+/* --- Responsividade Geral --- */
+@media (max-width: 768px) {
+    .container { margin: 20px 15px; padding: 20px; overflow-x: auto; }
+    
+    /* Search Form */
+    .search-form { flex-direction: column; align-items: stretch; }
+    .search-form input[type="text"] { width: calc(100% - 22px); }
+    .search-form button { width: 100%; }
+
+    /* Action Buttons (above table) */
+    .action-buttons.table-top { flex-direction: column; align-items: stretch; }
+    .action-buttons.table-top a { display: block; margin: 10px auto; width: calc(100% - 20px); }
+
+    /* Forms (Cadastro/Edição) */
+    .form-actions { flex-direction: column; align-items: stretch; }
+    .form-actions input[type="submit"], .form-actions .btn-back { width: 100%; margin: 5px 0; }
+
+    /* Tables */
+    table { min-width: 1000px; }
+    th, td { padding: 8px; font-size: 0.9em; }
+    td { color: #e9ecef; }
+
+    /* Buttons in table rows */
+    td:last-child form { display: block; margin-bottom: 5px; }
+    .btn { width: 100%; box-sizing: border-box; }
+}
