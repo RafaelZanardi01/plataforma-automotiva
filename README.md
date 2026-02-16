@@ -65,6 +65,11 @@ Na pasta `sql/` estão os scripts necessários para recriar o banco de dados:
 
 ---
 
+## 📊 Apresentação
+Acesse a apresentação completa em PowerPoint:
+[Download aqui](docs/apresentacao-plataforma-automotiva.pptx)
+
+
 ## 📌 Autor
 
 **Rafael Zanardi**  
